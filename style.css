@@ -24,8 +24,9 @@ body {
     }
 }
 
-#title {
+#title, #result {
     text-align: center;
+    padding: 20px;
 }
 
 #row {
@@ -33,22 +34,35 @@ body {
     justify-content: center;
 }
 
-#amount-input, #currency-choice {
+#amount-input, .currency-choice {
     text-align: center;
     align-items: center;
     margin: 20px;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 100px;
     color: white;
     margin: 0;
     padding: 20px;
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 50px;
     color: white;
     margin: 0;
     padding: 20px;
+}
+
+#amount, .currency-dropdown {
+    width: 70%;
+}
+
+#convert {
+    width: 20%;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
 }

@@ -11,20 +11,29 @@
         <h1>Currency Converter</h1>
     </div>
     <div id="row">
+        <div class="currency-choice">
+            <h2>Initial currency</h2>
+            <select class="currency-dropdown" name="1-currency-dropdown">
+                <option value="default"></option>
+            </select>
+        </div>
         <div id="amount-input">
             <h2>Enter amount</h2>
             <input type="number" id="amount">
         </div>
-        <div id="currency-choice">
-            <h2>Select currency</h2>
-            <select id="currency-dropdown" name="currency-dropdown">
+        <div class="currency-choice">
+            <h2>New currency</h2>
+            <select class="currency-dropdown" name="2-currency-dropdown">
                 <option value="default"></option>
             </select>
         </div>
     </div>
+    <div id="row">
+        <button id="convert">Convert</button>
+    </div>
 
     <div id="result">
-
+        <h1>999 USD to GBP is</h1>
     </div>
 </body>
 </html>

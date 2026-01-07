@@ -1,21 +1,23 @@
 async function loadCurrencyDropdown() {
-    const currencies = await loadCurrencyJSON();
+    let currencies = await loadCurrencyJSON();
+    const dropdowns = document.querySelectorAll(".currency-dropdown");
     
-    const dropdown = document.getElementById("currency-dropdown");
-    dropdown.innerHTML = "";
-    
-    currencies.forEach(currency => {
-        const option = document.createElement("option");
-        
-        option.innerText = `${currency.currency_code} - ${currency.currency_name}`;
-        option.value = currency.currency_code;
+    dropdowns.forEach(selectElement => {
+        selectElement.innerHTML = "";
 
-        dropdown.appendChild(option);
+        currencies.forEach(currency => {
+            const option = document.createElement("option");
+
+            option.innerText = `${currency.currency_code} - ${currency.currency_name}`;
+            option.value = currency.currency_code;
+            
+            selectElement.appendChild(option);
+        });
     });
 }
 
 async function loadCurrencyJSON() {
-    const response = await fetch("./currencies.json");
+    const response = await fetch("./resources/currencies.json");
     return await response.json();
 }
 
