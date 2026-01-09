@@ -1,19 +1,13 @@
-/** {*/
-/*    outline: 1px solid black;*/
-/*}*/
-
 body {
     background: linear-gradient(133deg,#1da03d,#50afe8,#f3234b,#ec4db1,#8ea08e);
     background-size: 300% 300%;
     animation: gradient-animation 30s ease infinite;
     margin: 0;
     min-height: 100vh;
-
     font-family: 'Roboto', sans-serif;
-
-    display: flex;             /* Turn body into a flexbox */
-    flex-direction: column;    /* Stack items vertically */
-    justify-content: center;   /* Center vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -37,40 +31,47 @@ body {
 .row {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 #amount-input, .currency-choice {
     text-align: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 30px;
+    margin: 10px;
 }
 
 h1 {
-    font-size: 100px;
+    font-size: 3rem;
     color: white;
     margin: 0;
     padding: 20px;
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 1.5rem;
     color: white;
     margin: 0;
-    padding: 20px;
+    padding: 10px;
 }
 
 #amount, .currency-dropdown {
-    width: 70%;
-    padding: 20px;
+    width: 250px;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
 }
 
 #convert {
-    width: 20%;
-    padding: 20px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    font-size: 30px;
+    padding: 15px 40px;
+    margin: 20px;
+    font-size: 1.25rem;
     border-radius: 10px;
     background-color: white;
     color: black;
+    border: none;
+    cursor: pointer;
 }
