@@ -5,6 +5,7 @@ body {
     margin: 0;
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,15 +13,9 @@ body {
 }
 
 @keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 #title, #result {
@@ -33,6 +28,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
+    max-width: 1200px;
 }
 
 #amount-input, .currency-choice {
@@ -40,7 +36,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
+    margin: 20px;
 }
 
 h1 {
@@ -67,11 +63,18 @@ h2 {
 
 #convert {
     padding: 15px 40px;
-    margin: 20px;
+    margin: 30px;
     font-size: 1.25rem;
     border-radius: 10px;
     background-color: white;
     color: black;
     border: none;
     cursor: pointer;
+    font-weight: bold;
+}
+
+#convert:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+    transition: transform 0.2s;
 }
