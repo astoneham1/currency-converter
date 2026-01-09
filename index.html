@@ -5,35 +5,41 @@
     <title>Currency Converter</title>
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
+    <script src="config.js"></script>
 </head>
 <body>
-    <div id="title">
-        <h1>Currency Converter</h1>
-    </div>
-    <div id="row">
+<div id="title">
+    <h1>Currency Converter</h1>
+</div>
+
+<form id="converter-form">
+    <div class="row">
         <div class="currency-choice">
             <h2>Initial currency</h2>
-            <select class="currency-dropdown" name="1-currency-dropdown">
-                <option value="default"></option>
+            <select class="currency-dropdown" name="from-currency" required>
+                <option value="">Select One</option>
             </select>
         </div>
+
         <div id="amount-input">
             <h2>Enter amount</h2>
-            <input type="number" id="amount">
+            <input type="number" id="amount" name="amount" min="0" required>
         </div>
+
         <div class="currency-choice">
             <h2>New currency</h2>
-            <select class="currency-dropdown" name="2-currency-dropdown">
-                <option value="default"></option>
+            <select class="currency-dropdown" name="to-currency" required>
+                <option value="">Select One</option>
             </select>
         </div>
     </div>
-    <div id="row">
-        <button id="convert">Convert</button>
-    </div>
 
+    <div class="row">
+        <button type="submit" id="convert">Convert</button>
+    </div>
+</form>
     <div id="result">
-        <h1>999 USD to GBP is</h1>
+        <h1></h1>
     </div>
 </body>
 </html>
